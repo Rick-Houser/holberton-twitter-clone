@@ -63,21 +63,72 @@ table {
 	font-size: 1.2em;
 	padding: 50px 50px 0 0 ;
 }
+.body {
+	width:650px;
+    float:left;
+
+}
+.aside {
+	width:342px;
+    float:right;
+    background-color:#AA9E39
+}
 
 h1 {
-	font-size: 1.7em;
+	font-size: 1.8em;
 	font-weight: bold;
+}
+
+h2 {
+	padding-top: 10px;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+p {
+	line-height: 1.6em;
+}
+.user-status {
+	padding: 10px;
+	float: left;
 }
 
 .header-content {
 	display: inline-block;
 	width: 992px;
+
 }
 
+.header {
+	  background-color:#4E9231;
+	 	padding-bottom: 15px;
+}
 .menu-btns {
 	text-align: center;
 	margin-top: 30px;
 }
+.user-imgs {
+	float: left;
+	border: 2px solid black;
+	width: 150px;
+    height: 150px;
+    margin: 8px;
+}
+
+.user-feat {
+    margin: 5px;
+}
+
+.advise-box {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 342px;
+	border: 2px solid #000000;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
 
 /* Target a tags within menu-btn class */
 .menu-btns a {
