@@ -119,11 +119,14 @@ p {
 }
 
 .advise-box {
+	padding: 3px;
+	 background-color:#000000;
+	color: #FFFFFF;
 	position: fixed;
 	bottom: 0;
 	right: 0;
-	width: 342px;
-	border: 2px solid #000000;
+	width: 200px;
+	border: 3px solid #800000;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
