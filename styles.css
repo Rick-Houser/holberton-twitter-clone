@@ -71,7 +71,8 @@ table {
 .aside {
 	width:342px;
     float:right;
-    background-color:#AA9E39
+    margin-top: 15px;
+    background-color:#55ACEE
 }
 
 h1 {
@@ -99,8 +100,9 @@ p {
 }
 
 .header {
-	  background-color:#4E9231;
-	 	padding-bottom: 15px;
+ 	background: #55ACEE;
+ 	background: linear-gradient(to right, #55ACEE, #35cd95 85%);
+	padding-bottom: 15px;
 }
 .menu-btns {
 	text-align: center;
