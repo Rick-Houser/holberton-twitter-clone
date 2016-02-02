@@ -61,15 +61,26 @@ table {
 
 .header-left {
 	float: left;
+	width: 70%;
 	padding: 10px 0 0 50px;
 }
 
+/* Creates semantic pipe character without using float */
 .header-right {
 	text-align: right;
 	font-size: 1.2em;
-	padding: 50px 50px 0 0 ;
+	padding: 50px 50px 0 0;
+	display: inline-flex;
 }
 
+.header-right li:first-child {
+	padding-right: 10px;
+	border-right: 1px solid #333333;
+}
+
+.header-right li:last-child {
+	padding-left: 10px;
+}
 
 .header-content {
 	display: inline-block;
