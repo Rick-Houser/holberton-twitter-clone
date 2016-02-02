@@ -89,6 +89,10 @@ table {
   background-color:#55ACEE
 }
 
+h1, h2, h3, p {
+	color: #333333;
+}
+
 h1 {
 	font-size: 1.5em;
 	font-weight: bold;
@@ -110,20 +114,21 @@ p {
 	float: left;
 	border: 2px solid black;
 	width: 150px;
-    height: 150px;
-    margin: 8px;
+  height: 150px;
+  margin: 8px;
 }
 
 .user-feat {
-    margin: 5px;
+  margin: 10px;
 }
 
 .advise-box {
 	padding: 3px;
-	 background-color:#000000;
+	background-color:#000000;
 	color: #FFFFFF;
 	position: fixed;
 	bottom: 0;
+	margin: 0 3px 3px 0;
 	right: 0;
 	width: 200px;
 	border: 3px solid #800000;
@@ -140,18 +145,25 @@ p {
 	-webkit-font-smoothing: antialiased;
 	font-size: 1.2em;
 	color: #FFF;
-	background: #0CADA7;
+  background: #0CADA7; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#55ACEE, #35cd95); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#55ACEE, #35cd95); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#55ACEE, #35cd95); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#55ACEE, #35cd95); /* Standard syntax */
 	padding: 5px 20px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	-webkit-transition: all 0.5s ease-in-out;
-	-ms-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
 }
 .menu-btns a:hover {
+  background: #0CADA7; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#35cd95, #55ACEE); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#35cd95, #55ACEE); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#35cd95, #55ACEE); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#35cd95, #55ACEE); /* Standard syntax */
+}
+
+a:visited {
 	background: #0A948F;
 }
 
@@ -164,6 +176,29 @@ p {
 }
 
 .aside h1 {
+	margin-top: 5px;
 	text-align: center;
 }
 
+/* Remove default underline and change color of links */
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+	-webkit-transition: all 2.0s ease-out;
+	-ms-transition: all 2.0s ease-out;
+	-moz-transition: all 2.0s ease-out;
+	-o-transition: all 2.0s ease-out;
+	transition: all 2.0s ease-out;
+}
+
+a:hover {
+	color: #55ACEE;
+	background-color: #ffffff;
+	text-decoration: underline;
+	-webkit-transition: all 2.0s ease-in-out;
+	-ms-transition: all 2.0s ease-in-out;
+	-moz-transition: all 2.0s ease-in-out;
+	-o-transition: all 2.0s ease-in-out;
+	transition: all 2.0s ease-in-out;
+}
