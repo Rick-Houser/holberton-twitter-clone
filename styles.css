@@ -53,9 +53,15 @@ table {
 	margin: 0 auto;
 }
 
+.header {
+ 	background: #55ACEE;
+ 	background: linear-gradient(to right, #55ACEE, #35cd95 85%);
+	padding-bottom: 15px;
+}
+
 .header-left {
 	float: left;
-	padding: 50px 0 0 50px;
+	padding: 10px 0 0 50px;
 }
 
 .header-right {
@@ -63,26 +69,33 @@ table {
 	font-size: 1.2em;
 	padding: 50px 50px 0 0 ;
 }
+
+
+.header-content {
+	display: inline-block;
+	width: 992px;
+
+}
+
 .body {
 	width:650px;
-    float:left;
+  float:left;
 
 }
 .aside {
 	width:342px;
-    float:right;
-    margin-top: 15px;
-    background-color:#55ACEE
+  float:right;
+  margin-top: 15px;
+  background-color:#55ACEE
 }
 
 h1 {
-	font-size: 1.8em;
+	font-size: 1.5em;
 	font-weight: bold;
 }
 
 h2 {
 	padding-top: 10px;
-	font-size: 1.4em;
 	font-weight: bold;
 }
 p {
@@ -93,21 +106,6 @@ p {
 	float: left;
 }
 
-.header-content {
-	display: inline-block;
-	width: 992px;
-
-}
-
-.header {
- 	background: #55ACEE;
- 	background: linear-gradient(to right, #55ACEE, #35cd95 85%);
-	padding-bottom: 15px;
-}
-.menu-btns {
-	text-align: center;
-	margin-top: 30px;
-}
 .user-imgs {
 	float: left;
 	border: 2px solid black;
@@ -143,11 +141,10 @@ p {
 	font-size: 1.2em;
 	color: #FFF;
 	background: #0CADA7;
-	padding: 6px 25px;
+	padding: 5px 20px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	margin: 10px 0;
 	-webkit-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -156,6 +153,14 @@ p {
 }
 .menu-btns a:hover {
 	background: #0A948F;
+}
+
+.menu-btns {
+	text-align: center;
+}
+
+.menu-btns > li {
+	display: inline;
 }
 
 .aside h1 {
