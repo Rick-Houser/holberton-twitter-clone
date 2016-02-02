@@ -120,14 +120,14 @@ p {
 th {
     background-color: #5AABFF;
     color: white;
-        height: 20px;
-
+    height: 20px;
 
 }
 td {
 	float:center;
 	vertical-align:middle;
 }
+
 
 
 th, td {
@@ -139,6 +139,7 @@ th, td {
 
 tr:nth-child(even) {background-color: #f2f2f2}
 tr:hover {background-color: #7CFC00}
+
 table {
     border: 3px solid black;
    width:100%;
@@ -154,17 +155,14 @@ table {
 	float: left;
 	border: 2px solid black;
 	width: 150px;
-  height: 150px;
-  margin: 8px;
-    background-color:#FFFFFF;
-
+  	height: 150px;
+  	margin: 8px;
+   	background-color:#FFFFFF;
 }
 
 .user-img-table{
 	border: 1px solid black;
-	width: 95%;
     background-color:#FFFFFF;
-
 }
 
 .user-feat {
