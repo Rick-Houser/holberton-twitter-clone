@@ -213,3 +213,29 @@ a:hover {
 	-o-transition: all 2.0s ease-in-out;
 	transition: all 2.0s ease-in-out;
 }
+
+/* Profile page styles */
+
+.profile {
+	width:100%;
+}
+
+.profile-img {
+	width: 350px;
+	height: 350px;
+}
+
+.profile-content {
+	width: 620px;	
+	display: inline-block;
+	float: right;
+}
+
+.status-updates {
+	line-height: 1.5em;
+}
+
+.profile-status {
+	width: 335px;
+	text-align: center;
+}
