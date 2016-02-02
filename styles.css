@@ -61,15 +61,26 @@ table {
 
 .header-left {
 	float: left;
+	width: 70%;
 	padding: 10px 0 0 50px;
 }
 
+/* Creates semantic pipe character without using float */
 .header-right {
 	text-align: right;
 	font-size: 1.2em;
-	padding: 50px 50px 0 0 ;
+	padding: 50px 50px 0 0;
+	display: inline-flex;
 }
 
+.header-right li:first-child {
+	padding-right: 10px;
+	border-right: 1px solid #333333;
+}
+
+.header-right li:last-child {
+	padding-left: 10px;
+}
 
 .header-content {
 	display: inline-block;
@@ -239,4 +250,30 @@ a:hover {
 	-moz-transition: all 2.0s ease-in-out;
 	-o-transition: all 2.0s ease-in-out;
 	transition: all 2.0s ease-in-out;
+}
+
+/* Profile page styles */
+
+.profile {
+	width:100%;
+}
+
+.profile-img {
+	width: 350px;
+	height: 350px;
+}
+
+.profile-content {
+	width: 620px;	
+	display: inline-block;
+	float: right;
+}
+
+.status-updates {
+	line-height: 1.5em;
+}
+
+.profile-status {
+	width: 335px;
+	text-align: center;
 }
