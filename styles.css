@@ -4,7 +4,7 @@
 */
 
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -143,10 +143,15 @@ tr:hover {background-color: #7CFC00}
 table {
     border: 3px solid black;
    	width:100%;
+
 }
 
 .user-status {
 	padding: 10px;
+	float: left;
+}
+.about-box {
+	padding: 20px;
 	float: left;
 }
 
@@ -157,6 +162,14 @@ table {
   	height: 150px;
   	margin: 8px;
    	background-color:#FFFFFF;
+}
+.abt-img {
+	float: left;
+	border: 2px solid black;
+	width: 350px;
+  	height: 350px;
+  	margin: 20px;
+  	padding: 1px;
 }
 
 .user-img-table{
@@ -200,6 +213,7 @@ table {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+
 }
 .menu-btns a:hover {
 	background: #0CADA7; /* For browsers that do not support gradients */
@@ -215,6 +229,7 @@ a:visited {
 
 .menu-btns {
 	text-align: center;
+	margin: 10px 0 0 0;
 }
 
 .menu-btns > li {
@@ -228,7 +243,7 @@ a:visited {
 
 /* Remove default underline and change color of links */
 
-a {
+.header-right a {
 	text-decoration: none;
 	color: #ffffff;
 	-webkit-transition: all 2.0s ease-out;
