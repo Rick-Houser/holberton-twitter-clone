@@ -155,6 +155,9 @@ table {
 	float: left;
 }
 
+.about-box h1 {
+	margin-top: 20px;
+}
 .user-imgs {
 	float: left;
 	border: 2px solid black;
