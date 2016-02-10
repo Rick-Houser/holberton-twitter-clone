@@ -47,6 +47,19 @@ table {
 	border-spacing: 0;
 }
 
+@media only screen and (max-width: 767px) {
+
+
+}
+@media only screen and (min-width: 768px) {
+
+
+}
+@media only screen and (min-width: 992px) {
+
+
+}
+
 /* Wrapper for page content */
 .wrapper {
 	width: 992px;
