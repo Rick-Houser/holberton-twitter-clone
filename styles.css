@@ -47,7 +47,7 @@ table {
 	border-spacing: 0;
 }
 
-
+/*Styles for screen sizes 767px and less*/
 @media only screen and (max-width: 767px) {
 	body .wrapper, body .header-content {
 		width: 100%;
@@ -138,12 +138,102 @@ so it lines up under aside perfectly.*/
 	}
 
 }
-@media only screen and (min-width: 768px) {
 
+/*Styles for screen sizes below 992px and above 768px*/
+@media (max-width: 992px) and (min-width: 768px) {
 
-}
-@media only screen and (min-width: 992px) {
+	body .wrapper, body .header-content {
+		width: 768px;
+	}
+/*Centers logo and tagline*/
+	.header {
+		text-align: center; 
+	}
 
+/*Set width to 100% and override unnecessary padding */
+	body .header-left { 
+		padding: 0;
+		width: 100%;
+	}
+
+/* Center text, set width to 100% and set display to block remove padding*/
+	body .header-right {
+		text-align: center;
+		width: 100%;
+		display: block;
+		padding: 0;
+	}
+/*Remove padding from links and 
+set display to inline-block to align horizontally*/
+	body .header-right li {
+		display: inline-block;
+		padding: 0;
+	}
+
+/*Change the way to display pipe character to reflect QA example*/
+	body .header-right li:before {
+		content:"|";	
+	}
+
+	body .header-right li:first-child:before {
+		content: "";
+	}
+
+/*Remove previous pipe, remove unneeded padding and margin*/
+	body .header-right li:first-child{
+		border-right: none;
+		padding: 0;
+		margin-right: 0;
+	}
+
+/*Set margin between links to be 15px exactly*/
+	body .header-right li a:last-child {
+		margin-left: 15px;
+	}
+/*Remove unneeded padding from right link "Logout"*/
+	body .header-right li:last-child {
+		padding: 0;
+	}
+
+/*Set width of divs to take up 100% width*/
+	body .body {
+		width: 100%;
+	}
+
+/*Ensure each box takes up 1/3 screen size.
+Remove unneeded margin-top.*/
+	body .aside {
+		width: 33%;
+		float: left;
+		margin-top: 0;
+	}
+
+/*Ensure user names in aside align under photo*/
+body .user-feat h2 {
+		clear: left;
+	}
+
+/*Change to display block so menu btns align vertically*/
+	body .menu-btns > li {
+		display: inline-block;
+	}
+/*Change position so box is at bottom takes up 33% of screen, 
+remove extra padding and borders. Change display to inline-block 
+so it lines up under aside perfectly. Set height to match siblings.*/
+	body .advise-box {
+		position: relative;
+		width: 33%;
+		height: 459px;
+		display: inline-block;
+		border-radius: 0;
+		padding: 0;
+		border: 0;
+	}
+
+/*Ensure all text has 15px of margin*/	
+	h1, h2, h3, h4, h5, h6, p, li {
+		margin: 15px;
+	}
 
 }
 
