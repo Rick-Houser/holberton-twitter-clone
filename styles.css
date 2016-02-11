@@ -63,11 +63,12 @@ table {
 		width: 100%;
 	}
 
-/* Center text, set width to 100% and set display to block*/
+/* Center text, set width to 100% and set display to block remove padding*/
 	body .header-right {
 		text-align: center;
 		width: 100%;
 		display: block;
+		padding: 0;
 	}
 /*Remove padding from links and 
 set display to inline-block to align horizontally*/
