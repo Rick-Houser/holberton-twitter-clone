@@ -115,6 +115,10 @@ set display to inline-block to align horizontally*/
 		clear: left;
 	}
 
+/*Change to display block so menu btns align vertically*/
+	body .menu-btns > li {
+		display: block;
+	}
 /*Change position so box is at bottom, set width to 100%, 
 remove extra padding and borders. Change display to inline-block 
 so it lines up under aside perfectly.*/
