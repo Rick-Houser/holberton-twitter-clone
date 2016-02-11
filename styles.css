@@ -52,6 +52,12 @@ table {
 	body .wrapper, body .header-content {
 		width: 100%;
 	}
+
+/*Sets the width of the users table */
+	table {
+		width: 700px;
+	}
+
 /*Centers logo and tagline*/
 	.header {
 		text-align: center; 
@@ -131,6 +137,14 @@ so it lines up under aside perfectly.*/
 		padding: 0;
 		border: 0;
 	}
+	body .advise-box-alt {
+		position: relative;
+		width: 100%;
+		display: inline-block;
+		border-radius: 0;
+		padding: 0;
+		border: 0;
+	}
 
 /*Ensure all text has 15px of margin*/	
 	h1, h2, h3, h4, h5, h6, p, li {
@@ -145,6 +159,11 @@ so it lines up under aside perfectly.*/
 	body .wrapper, body .header-content {
 		width: 768px;
 	}
+/*Sets the width of the users table */
+	table {
+   		width:100%;
+	}
+
 /*Centers logo and tagline*/
 	.header {
 		text-align: center; 
@@ -223,12 +242,13 @@ so it lines up under aside perfectly. Set height to match siblings.*/
 	body .advise-box {
 		position: relative;
 		width: 33%;
-		height: 459px;
+		height: 70px;
 		display: inline-block;
-		border-radius: 0;
 		padding: 0;
-		border: 0;
+		border: 3px solid #800000;
+
 	}
+		
 
 /*Ensure all text has 15px of margin*/	
 	h1, h2, h3, h4, h5, h6, p, li {
@@ -332,8 +352,6 @@ tr:hover {background-color: #7CFC00}
 
 table {
     border: 3px solid black;
-   	width:100%;
-
 }
 
 .user-status {
@@ -375,6 +393,21 @@ table {
 }
 
 .advise-box {
+	padding: 3px;
+	background-color:#000000;
+	color: #FFFFFF;
+	position: fixed;
+	bottom: 0;
+	margin: 0 3px 3px 0;
+	right: 0;
+	width: 250px;
+	border: 3px solid #800000;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.advise-box-alt {
 	padding: 3px;
 	background-color:#000000;
 	color: #FFFFFF;
