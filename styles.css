@@ -47,8 +47,90 @@ table {
 	border-spacing: 0;
 }
 
-@media only screen and (max-width: 767px) {
 
+@media only screen and (max-width: 767px) {
+	body .wrapper, body .header-content {
+		width: 100%;
+	}
+/*Centers logo and tagline*/
+	.header {
+		text-align: center; 
+	}
+
+/*Set width to 100% and override unnecessary padding */
+	body .header-left { 
+		padding: 0;
+		width: 100%;
+	}
+
+/* Center text, set width to 100% and set display to block*/
+	body .header-right {
+		text-align: center;
+		width: 100%;
+		display: block;
+	}
+/*Remove padding from links and 
+set display to inline-block to align horizontally*/
+	body .header-right li {
+		display: inline-block;
+		padding: 0;
+	}
+
+/*Change the way to display pipe character to reflect QA example*/
+	body .header-right li:before {
+		content:"|";	
+	}
+
+	body .header-right li:first-child:before {
+		content: "";
+	}
+
+/*Remove previous pipe, remove unneeded padding and margin*/
+	body .header-right li:first-child{
+		border-right: none;
+		padding: 0;
+		margin-right: 0;
+	}
+
+/*Set margin between links to be 15px exactly*/
+	body .header-right li a:last-child {
+		margin-left: 15px;
+	}
+/*Remove unneeded padding from right link "Logout"*/
+	body .header-right li:last-child {
+		padding: 0;
+	}
+
+/*Set width of divs to take up 100% width*/
+	body .body {
+		width: 100%;
+	}
+
+	body .aside {
+		width: 100%;
+	}
+
+/*Ensure divs in aside line up vertically*/
+	body .user-feat {
+		clear: left;
+	}
+
+/*Change position so box is at bottom, set width to 100%, 
+remove extra padding and borders. Change display to inline-block 
+so it lines up under aside perfectly.*/
+	body .advise-box {
+		position: relative;
+		width: 100%;
+		display: inline-block;
+		border-radius: 0;
+		padding: 0;
+		border: 0;
+	}
+
+/*Ensure all text has 15px of margin*/	
+	h1, h2, h3, h4, h5, h6, p, li {
+		margin: 15px;
+	}
 
 }
 @media only screen and (min-width: 768px) {
