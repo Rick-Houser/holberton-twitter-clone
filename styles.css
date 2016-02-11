@@ -245,8 +245,7 @@ so it lines up under aside perfectly. Set height to match siblings.*/
 		height: 70px;
 		display: inline-block;
 		padding: 0;
-		border: 3px solid #800000;
-
+		border: 0;
 	}
 		
 
