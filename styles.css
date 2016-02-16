@@ -28,8 +28,19 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+/* Use flexbox for styles below header */
+.main-content {
+    display: flex;
+    flex-direction: row;
+}
 body {
 	line-height: 1;
+    display: flex;
+    flex-direction: column;
+}
+div .aside-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 ol, ul {
 	list-style: none;
