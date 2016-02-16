@@ -53,6 +53,10 @@ table {
 		width: 100%;
 	}
 
+    body .header-content {
+        display:flex;
+        flex-direction: column;
+    }
 /*Sets the width of the users table */
 	table {
 		width: 700px;
@@ -126,6 +130,10 @@ set display to inline-block to align horizontally*/
 	body .menu-btns > li {
 		display: block;
 	}
+    
+    body .menu-btns {
+        margin: 50px 0 0 0;
+    }
 /*Change position so box is at bottom, set width to 100%, 
 remove extra padding and borders. Change display to inline-block 
 so it lines up under aside perfectly.*/
@@ -159,6 +167,11 @@ so it lines up under aside perfectly.*/
 	body .wrapper, body .header-content {
 		width: 768px;
 	}
+    
+    body .header-content {
+        flex-direction: column;
+    }
+    
 /*Sets the width of the users table */
 	table {
    		width:100%;
@@ -170,10 +183,16 @@ so it lines up under aside perfectly.*/
 	}
 
 /*Set width to 100% and override unnecessary padding */
-	body .header-left { 
+	body .header-left {
+        display: flex;
+        flex-flow: column;
 		padding: 0;
 		width: 100%;
 	}
+    
+    body .header-left img {
+        align-self: center;
+    }
 
 /* Center text, set width to 100% and set display to block remove padding*/
 	body .header-right {
@@ -236,6 +255,10 @@ body .user-feat h2 {
 	body .menu-btns > li {
 		display: inline-block;
 	}
+    
+    body .menu-btns {
+        margin: 35px 0 0 0;
+    }
 /*Change position so box is at bottom takes up 33% of screen, 
 remove extra padding and borders. Change display to inline-block 
 so it lines up under aside perfectly. Set height to match siblings.*/
@@ -269,7 +292,6 @@ so it lines up under aside perfectly. Set height to match siblings.*/
 }
 
 .header-left {
-	float: left;
 	width: 70%;
 	padding: 10px 0 0 50px;
 }
@@ -279,7 +301,8 @@ so it lines up under aside perfectly. Set height to match siblings.*/
 	text-align: right;
 	font-size: 1.2em;
 	padding: 50px 50px 0 0;
-	display: inline-flex;
+	display: flex;
+    height: 20px;
 }
 
 .header-right li:first-child {
@@ -292,7 +315,7 @@ so it lines up under aside perfectly. Set height to match siblings.*/
 }
 
 .header-content {
-	display: inline-block;
+	display: flex;
 	width: 992px;
 
 }
