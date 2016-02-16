@@ -68,6 +68,11 @@ table {
         display:flex;
         flex-direction: column;
     }
+    
+    body .main-content {
+        display: flex;
+        flex-direction: column;
+    }
 /*Sets the width of the users table */
 	table {
 		width: 700px;
@@ -248,20 +253,26 @@ set display to inline-block to align horizontally*/
 	body .body {
 		width: 100%;
 	}
-
+/**/
+    body .main-content {
+        display: flex;
+        flex-direction: column;
+    }
 /*Ensure each box takes up 1/3 screen size.
 Remove unneeded margin-top.*/
 	body .aside {
 		width: 33%;
-		float: left;
 		margin-top: 0;
 	}
 
+    body .aside-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
 /*Ensure user names in aside align under photo*/
 body .user-feat h2 {
 		clear: left;
 	}
-
 /*Change to display block so menu btns align vertically*/
 	body .menu-btns > li {
 		display: inline-block;
