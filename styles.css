@@ -35,8 +35,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    display: flex;
-    flex-direction: column;
 }
 div .aside-wrapper {
     display: flex;
@@ -74,9 +72,7 @@ table {
         flex-direction: column;
     }
 /*Sets the width of the users table */
-	table {
-		width: 700px;
-	}
+
 
 /*Centers logo and tagline*/
 	.header {
@@ -173,6 +169,35 @@ so it lines up under aside perfectly.*/
 /*Ensure all text has 15px of margin*/	
 	h1, h2, h3, h4, h5, h6, p, li {
 		margin: 15px;
+	}
+
+/* Profile styles on mobile */
+	body .profile-user-status {
+		flex-direction: column-reverse;		
+	}
+
+/* All users styles on mobile */
+	body .table-row {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	body .bio {
+		width: 90%;
+		display: flex;
+		margin: 5px 5px 15px 5px;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	body #bio-head {
+		text-align: center;
+	}
+
+	body .user-img-table {
+		margin-top: 15px;
 	}
 
 }
@@ -299,6 +324,11 @@ so it lines up under aside perfectly. Set height to match siblings.*/
 		margin: 15px;
 	}
 
+/* All users page mobile styles */
+	body .bio, #bio-head {
+		width: 50% !important;
+	}
+
 }
 
 /* Wrapper for page content */
@@ -343,14 +373,12 @@ so it lines up under aside perfectly. Set height to match siblings.*/
 }
 
 .body {
-	width:650px;
-  	float:left;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .aside {
 	width:342px;
-  	float:right;
   	margin-top: 15px;
   	background-color:#55ACEE
 }
@@ -378,7 +406,6 @@ th {
 
 }
 td {
-	float:center;
 	vertical-align:middle;
 }
 
@@ -400,11 +427,6 @@ table {
 
 .user-status {
 	padding: 10px;
-	float: left;
-}
-.about-box {
-	padding: 20px;
-	float: left;
 }
 
 .about-box h1 {
@@ -538,17 +560,21 @@ a:hover {
 
 .profile {
 	width:100%;
+	display: flex;
+	flex-direction: column;
 }
 
+/* Moves image to top of flexbox column */
 .profile-img {
 	width: 350px;
 	height: 350px;
+	order: 1;
+	align-self: center;
 }
 
 .profile-content {
-	width: 620px;	
+	width: 100%;	
 	display: inline-block;
-	float: right;
 }
 
 .status-updates {
@@ -558,4 +584,42 @@ a:hover {
 .profile-status {
 	width: 335px;
 	text-align: center;
+}
+
+/* Flexbox styles for Profile */
+.profile-user-status {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+/* About pages styles */
+.about-container {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Users page styles */
+/* Table styles  */
+.table-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.table-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.bio, #bio-head {
+	width: 65%;
+}
+
+.table-row:nth-child(odd) {
+    background-color: #CCCCCC;
+}
+
+.table-row * {
+    line-height: 20px;
 }
