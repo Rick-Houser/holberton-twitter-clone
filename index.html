@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<meta name="description" content="This webpage is about the incredible RETTIWT">
 	<meta name="keywords" content="RETTIWT, Holberton, incredible, website, clone, twitter ">
+     <script type="text/javascript" src="post_a_status.js"></script>
 </head>
 <body>
 	<div class="wrapper"> <!-- This is a wrapper for all of our content. It is set to a max size of 992px -->
@@ -33,7 +34,21 @@
 			</ul>
 		</div><!-- Header Ends -->
         <div class="main-content"><!-- Main Content Wrapper -->
-            <div class="body"> <!-- Body Begins -->
+                <div class="body"> <!-- Body Begins -->
+                <div class="ask-post-status" id="ask-post-status">
+                <ul class="menu-btns">
+                   <li><a href="javascript:postpre()">Post A New Status</a></li>
+                </ul>
+                </div>
+                 <div class="post-status" id="post-status">
+                    <h2>Post New Status:</h2>
+                    <hr>
+                    <form id="statuspost">
+                         <textarea name="status" rows=3 cols=55 ></textarea><br>
+                         <input type="checkbox" name="location" value="yes" checked>Include Location<br>
+                         <input type="submit" value="Post">
+                    </form>
+                </div>
                 <div class="user-status">
                     <img class="user-imgs" src="greenuser.png" alt="User Icon">
                     <h2> USER NAME | February 1, 2016 - 1:50PM </h2>

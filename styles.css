@@ -428,7 +428,24 @@ table {
 .user-status {
 	padding: 10px;
 }
-
+.post-status {
+	text-decoration: none;
+	text-align: center;
+	display: none;
+	padding: 10px;
+	margin: 15px 15px 15px 0;
+	background-color:#41C670;
+}
+.ask-post-status {
+	text-decoration: none;
+	text-align: center;
+	padding: 10px;
+	margin: 15px 15px 15px 0;
+	background-color:#41C670;
+}
+.ask-post-status a {
+ 	color: #ffffff;
+}
 .about-box h1 {
 	margin-top: 20px;
 }
@@ -521,7 +538,7 @@ a:visited {
 
 .menu-btns {
 	text-align: center;
-	margin: 10px 0 0 0;
+	margin: 10px 10px 10px 10px;
 }
 
 .menu-btns > li {
