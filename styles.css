@@ -141,6 +141,7 @@ set display to inline-block to align horizontally*/
 /*Change to display block so menu btns align vertically*/
 	body .menu-btns > li {
 		display: block;
+		margin: 20px 20px 20px 20px;
 	}
     
     body .menu-btns {
@@ -433,14 +434,14 @@ table {
 	text-align: center;
 	display: none;
 	padding: 10px;
-	margin: 15px 15px 15px 0;
+	margin: 15px 5px 15px 5px;
 	background-color:#41C670;
 }
 .ask-post-status {
 	text-decoration: none;
 	text-align: center;
 	padding: 10px;
-	margin: 15px 15px 15px 0;
+	margin: 15px 5px 15px 5px;
 	background-color:#41C670;
 }
 .ask-post-status a {
@@ -522,6 +523,8 @@ table {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	border-style: solid;
+    border-width: 2px;
 
 }
 .menu-btns a:hover {
@@ -550,6 +553,40 @@ a:visited {
 	text-align: center;
 }
 
+.menu-btns-alt a {
+	text-align:center;
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+	font-size: 1.2em;
+	color: #FFF;
+  	background: #0CADA7; /* For browsers that do not support gradients */
+  	background: -webkit-linear-gradient(#55ACEE, #35cd95); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(#55ACEE, #35cd95); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(#55ACEE, #35cd95); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(#55ACEE, #35cd95); /* Standard syntax */
+  	border-style: solid;
+    border-width: 2px;
+	padding: 5px 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+}
+.menu-btns-alt a:hover {
+	background: #0CADA7; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#35cd95, #55ACEE); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#35cd95, #55ACEE); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#35cd95, #55ACEE); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#35cd95, #55ACEE); /* Standard syntax */
+}
+.menu-btns-alt {
+	text-align: center;
+	margin: 10px 10px 10px 10px;
+}
+
+.menu-btns-alt > li {
+	display: inline;
+}
 /* Remove default underline and change color of links */
 
 .header-right a {
