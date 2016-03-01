@@ -8,17 +8,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		reply[r].addEventListener('click', function() {
 			var parent = this.closest('#ask-post-status');
 			var post = this.parentNode.parentNode.parentNode.nextElementSibling;
-			parent.classList.add('hidden');
 			post.classList.remove('hidden');
 		});
 	}
 	for (p; p < p_length; p++) {	
 		post_button[p].addEventListener('click', function() {
-			var parent = this.parentNode.parentNode.parentNode.previousElementSibling;
-			var post_box = this.parentNode.parentNode.parentNode;
-			alert(post_box.className);
-			// parent.classList.remove('hidden');
-			// post_box.classList.add('hidden');
+			var post_box = this.closest('#reply_post');
+			post_box.classList.add('hidden');
 		});
 	}
 });

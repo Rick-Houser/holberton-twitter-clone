@@ -442,14 +442,14 @@ table {
 	margin: 15px 5px 15px 5px;
 	background-color:#41C670;
 }
-.ask-post-status {
+#ask-post-status {
 	text-decoration: none;
 	text-align: center;
 	padding: 10px;
 	margin: 15px 5px 15px 5px;
 	background-color:#41C670;
 }
-.ask-post-status a {
+#ask-post-status a {
  	color: #ffffff;
 }
 .about-box h1 {
@@ -692,6 +692,6 @@ a:hover {
 }
 
 .hidden {
-	display: none !important;
+	display: none;
 }
 
