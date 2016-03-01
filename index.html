@@ -10,6 +10,7 @@
 	<meta name="description" content="This webpage is about the incredible RETTIWT">
 	<meta name="keywords" content="RETTIWT, Holberton, incredible, website, clone, twitter ">
      <script type="text/javascript" src="post_a_status.js"></script>
+     <script type="text/javascript" src="reply.js"></script>
 </head>
 <body>
 	<div class="wrapper"> <!-- This is a wrapper for all of our content. It is set to a max size of 992px -->
@@ -36,12 +37,12 @@
         <div class="main-content"><!-- Main Content Wrapper -->
                 <div class="body"> <!-- Body Begins -->
                 <div class="ask-post-status" id="ask-post-status">
-                <ul class="menu-btns-alt">
-                   <li><a href="javascript:postpre()">Post A New Status</a></li>
-                </ul>
+                    <ul class="menu-btns-alt">
+                       <li><a href="javascript:postpre()">Post A New Status</a></li>
+                    </ul>
                 </div>
                  <div class="post-status" id="post-status">
-                    <h2>Post New Status:</h2>
+                    <h2>Post A New Status:</h2>
                     <hr>
                     <form id="statuspost">
                          <textarea name="status" rows=3 cols=55 ></textarea><br>
@@ -57,6 +58,22 @@
                         Bacon ipsum dolor amet corned beef tail brisket fatback boudin pork. Porchetta tail flank ham hock, venison meatloaf drumstick bresaola hamburger prosciutto. Pork capicola pork belly chicken tail.
                     </p>
                 </div>
+                <div class="ask-post-status" id="ask-post-status" data-attribute="hidden">
+                    <ul class="menu-btns-alt">
+                        <li><a id="reply">Reply</a></li>
+                    </ul>
+                </div>
+                <div class="hidden" id="reply_post" data-attribute="body">
+                    <h2>Reply:</h2>
+                    <hr>
+                    <form id="statuspost">
+                         <textarea name="status" rows=3 cols=55 ></textarea><br>
+                         <input type="checkbox" name="location" value="yes" checked>Include Location<br>
+                         <ul class="menu-btns-alt">
+                            <li><a id="post">Post</a></li>
+                        </ul>
+                    </form>
+                </div>
                 <div class="user-status">
                     <img class="user-imgs" src="blueuser.png" alt="User Icon">
                     <h2> USER NAME | January 19, 2016 - 8:30PM </h2>
@@ -64,6 +81,22 @@
                     <p>
                         Andouille shoulder pancetta pork loin tri-tip tongue kevin kielbasa tenderloin bacon short loin rump. Pork chop pancetta sirloin ham hock meatloaf. Corned beef leberkas cupim tri-tip kevin ball tip. Drumstick corned beef picanha rump ball tip sirloin short ribs fatback strip steak spare ribs ribeye turkey boudin. Fatback pork pancetta flank kevin rump spare ribs prosciutto jerky biltong meatball capicola filet mignon tenderloin. Ham hock pancetta strip steak pig pastrami cupim.
                     </p>
+                </div>
+                <div class="ask-post-status" id="ask-post-status">
+                    <ul class="menu-btns-alt">
+                       <li><a id="reply">Reply</a></li>
+                    </ul>
+                </div>
+                 <div class="hidden" id="reply_post">
+                    <h2>Reply:</h2>
+                    <hr>
+                    <form id="statuspost">
+                         <textarea name="status" rows=3 cols=55 ></textarea><br>
+                         <input type="checkbox" name="location" value="yes" checked>Include Location<br>
+                        <ul class="menu-btns-alt">
+                            <li><a id="post">Post</a></li>
+                        </ul>
+                    </form>
                 </div>
                 <div class="user-status">
                     <img class="user-imgs" src="greenuser.png" alt="User Icon">
@@ -73,6 +106,22 @@
                         T-bone meatball cupim, filet mignon beef ribs pork belly shank pork loin kielbasa andouille pancetta. Meatball tail turkey pastrami ball tip, venison pig swine cow salami chicken. Corned beef ham hock t-bone, tri-tip pork belly shank bresaola meatball drumstick bacon cow rump jerky sausage turducken.
                     </p>
                 </div>
+                <div class="ask-post-status" id="ask-post-status">
+                    <ul class="menu-btns-alt">
+                       <li><a id="reply">Reply</a></li>
+                    </ul>
+                </div>
+                 <div class="hidden" id="reply_post">
+                    <h2>Reply:</h2>
+                    <hr>
+                    <form id="statuspost">
+                         <textarea name="status" rows=3 cols=55 ></textarea><br>
+                         <input type="checkbox" name="location" value="yes" checked>Include Location<br>
+                        <ul class="menu-btns-alt">
+                            <li><a id="post">Post</a></li>
+                        </ul>
+                    </form>
+                </div>
                 <div class="user-status">
                     <img class="user-imgs" src="blueuser.png" alt="User Icon">
                     <h2> USER NAME | January 1, 2016 - 1:40AM </h2>
@@ -80,6 +129,22 @@
                     <p>
                         Jowl pork ham, tri-tip shank brisket pork belly shankle flank biltong tongue strip steak. Corned beef pork loin turducken doner turkey, alcatra meatball salami tenderloin capicola t-bone leberkas pastrami. Picanha salami pancetta, strip steak chuck porchetta short ribs corned beef capicola andouille. Drumstick alcatra beef, chicken sirloin doner shankle fatback beef ribs brisket.
                     </p>
+                </div>
+                <div class="ask-post-status" id="ask-post-status">
+                    <ul class="menu-btns-alt">
+                       <li><a id="reply">Reply</a></li>
+                    </ul>
+                </div>
+                 <div class="hidden" id="reply_post">
+                    <h2>Reply:</h2>
+                    <hr>
+                    <form id="statuspost">
+                         <textarea name="status" rows=3 cols=55 ></textarea><br>
+                         <input type="checkbox" name="location" value="yes" checked>Include Location<br>
+                        <ul class="menu-btns-alt">
+                            <li><a id="post">Post</a></li>
+                        </ul>
+                    </form>
                 </div>
             </div><!-- Body Content Ends -->
             <div class="aside-wrapper"> <!-- Aside Begins -->

@@ -3,6 +3,10 @@
    License: none (public domain)
 */
 
+a {
+	cursor: pointer;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -677,3 +681,16 @@ a:hover {
 .table-row * {
     line-height: 20px;
 }
+
+#reply_post {
+	text-decoration: none;
+	text-align: center;
+	padding: 10px;
+	margin: 15px 5px 15px 5px;
+	background-color:#41C670;
+}
+
+.hidden {
+	display: none !important;
+}
+
