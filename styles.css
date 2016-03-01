@@ -378,6 +378,7 @@ so it lines up under aside perfectly. Set height to match siblings.*/
 }
 
 .body {
+		width: 650px;
     display: flex;
     flex-direction: column;
 }
