@@ -3,20 +3,25 @@ document.addEventListener("DOMContentLoaded", function() {
 	var post_button = document.querySelectorAll('#post');
 	var r = 0, r_length = reply.length;
 	var p = 0, p_length = post.length;
-
-	for (r; r < r_length; r++) {
+		for (r; r < r_length; r++) {
 		reply[r].addEventListener('click', function() {
-			var parent = this.closest('#ask-post-status');
-			var post = this.parentNode.parentNode.parentNode.nextElementSibling;
-			post.classList.remove('hidden');
-			parent.classList.add('hidden');
+		var parent = this.closest('#ask-post-status');
+		var post = this.parentNode.parentNode.parentNode.nextElementSibling;
+		post.toggle();
+		parent.toggle();
+				parent.classList.add('hidden');
 		});
 	}
 	for (p; p < p_length; p++) {	
 		post_button[p].addEventListener('click', function() {
-			var post_box = this.closest('#reply_post');
-			post_box.classList.add('hidden');
-			this.parentNode.parentNode.parentNode.parentNode.previousElementSibling.classList.remove('hidden');
+		var post_box = this.closest('#reply_post');
+		post_box.toggle();
+		this.parentNode.parentNode.parentNode.parentNode.previousElementSibling.toggle();
 		});
 	}
 });
+
+
+
+
+

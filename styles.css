@@ -430,17 +430,8 @@ tr:hover {background-color: #7CFC00}
 table {
     border: 3px solid black;
 }
-
 .user-status {
 	padding: 10px;
-}
-.post-status {
-	text-decoration: none;
-	text-align: center;
-	display: none;
-	padding: 10px;
-	margin: 15px 5px 15px 5px;
-	background-color:#41C670;
 }
 #ask-post-status {
 	text-decoration: none;
