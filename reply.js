@@ -9,12 +9,14 @@ document.addEventListener("DOMContentLoaded", function() {
 			var parent = this.closest('#ask-post-status');
 			var post = this.parentNode.parentNode.parentNode.nextElementSibling;
 			post.classList.remove('hidden');
+			parent.classList.add('hidden');
 		});
 	}
 	for (p; p < p_length; p++) {	
 		post_button[p].addEventListener('click', function() {
 			var post_box = this.closest('#reply_post');
 			post_box.classList.add('hidden');
+			this.parentNode.parentNode.parentNode.parentNode.previousElementSibling.classList.remove('hidden');
 		});
 	}
 });
