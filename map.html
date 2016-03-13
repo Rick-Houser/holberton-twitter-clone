@@ -33,11 +33,11 @@
 	    ui.addControl("zoomRectangle", new H.ui.ZoomRectangle());
 	    var zoomRect = ui.getControl('zoomRectangle');
 	    zoomRect.setAlignment('right-middle');
-	    // Add window resize listener to adjust the map size
+			// Add window resize listener to adjust the map dimensions.
 	    window.addEventListener('resize', function() {
 	      map.getViewPort().resize();
 	    });
-	    // Add map context menu event listener
+			// Add map context menu event listener.
 	    map.addEventListener('contextmenu', function(e) {
 	      var coord = map.screenToGeo(e.viewportX, e.viewportY);
 	      var revGeocodeParams = {
@@ -46,19 +46,26 @@
 	        maxresults: 1
 	      };
 
-	    	var geoCode = platform.getGeocodingService();
-	      // reverse geoCode request
-	      geoCode.reverseGeocode(revGeocodeParams, function(result) {
-	        onResult(result, e);
+	    	var gc = platform.getGeocodingService();
+				// Send the RGC request over.
+	      gc.reverseGeocode(revGeocodeParams, function(result) {
+	        onRGCResult(result, e);
 	      }, function(error) {
 	        console.log(error);
 	      });
-	      // Process geoCode response and adds return associated address
-	      function onResult(result, e) {
+				/*
+				 * Processes reverse geocoder response and
+				 * adds a context menu item showing the associated address.
+				 */
+	      function onRGCResult(result, e) {
+					// find the response JSON path to get the address label.
 	        var addressLabel = result.Response.View[0].Result[0];
+					// add the address label as a context menu item.
 	        e.items.push(new H.util.ContextItem({
 	          label: addressLabel.Location.Address.Label
 	        }));
+					/* Dispatch the context menu event again for all attached listeners
+					to act with new added item(s). */
 	        e.currentTarget.dispatchEvent(e);
 	        e.stopPropagation(e);
 	      }
