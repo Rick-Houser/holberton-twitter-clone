@@ -414,6 +414,14 @@ table {
  	color: #ffffff;
 }
 
+#show-more-status {
+	text-decoration: none;
+	text-align: center;
+	padding: 10px;
+	margin: 15px 5px 15px 5px;
+	background-color:#FF0000;
+}
+
 .about-box h1 {
 	margin-top: 20px;
 }
