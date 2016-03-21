@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -72,17 +72,17 @@ table {
         display:flex;
         flex-direction: column;
     }
-    
+
     body .main-content {
         display: flex;
         flex-direction: column;
     }
 /*Centers logo and tagline*/
 	.header {
-		text-align: center; 
+		text-align: center;
 	}
 /*Set width to 100% and override unnecessary padding */
-	body .header-left { 
+	body .header-left {
 		padding: 0;
 		width: 100%;
 	}
@@ -100,7 +100,7 @@ table {
 	}
 /*Change the way to display pipe character to reflect QA example*/
 	body .header-right li:before {
-		content:"|";	
+		content:"|";
 	}
 
 	body .header-right li:first-child:before {
@@ -137,7 +137,7 @@ table {
 		display: block;
 		margin: 20px 20px 20px 20px;
 	}
-    
+
     body .menu-btns {
         margin: 50px 0 0 0;
     }
@@ -159,13 +159,13 @@ table {
 		padding: 0;
 		border: 0;
 	}
-/*Ensure all text has 15px of margin*/	
+/*Ensure all text has 15px of margin*/
 	h1, h2, h3, h4, h5, h6, p, li {
 		margin: 15px;
 	}
 /* Profile styles on mobile */
 	body .profile-user-status {
-		flex-direction: column-reverse;		
+		flex-direction: column-reverse;
 	}
 /* All users styles on mobile */
 	body .table-row {
@@ -197,7 +197,7 @@ table {
 	body .wrapper, body .header-content {
 		width: 768px;
 	}
-    
+
     body .header-content {
         flex-direction: column;
     }
@@ -207,7 +207,7 @@ table {
 	}
 /*Centers logo and tagline*/
 	.header {
-		text-align: center; 
+		text-align: center;
 	}
 /*Set width to 100% and override unnecessary padding */
 	body .header-left {
@@ -216,7 +216,7 @@ table {
 		padding: 0;
 		width: 100%;
 	}
-    
+
     body .header-left img {
         align-self: center;
     }
@@ -234,7 +234,7 @@ table {
 	}
 /*Change the way to display pipe character to reflect QA example*/
 	body .header-right li:before {
-		content:"|";	
+		content:"|";
 	}
 
 	body .header-right li:first-child:before {
@@ -281,11 +281,11 @@ body .user-feat h2 {
 	body .menu-btns > li {
 		display: inline-block;
 	}
-    
+
     body .menu-btns {
         margin: 35px 0 0 0;
     }
-/*Change position so box is at bottom takes up 33% of screen, remove extra padding and borders. Change display to inline-block 
+/*Change position so box is at bottom takes up 33% of screen, remove extra padding and borders. Change display to inline-block
 so it lines up under aside perfectly. Set height to match siblings.*/
 	body .advise-box {
 		position: relative;
@@ -295,7 +295,7 @@ so it lines up under aside perfectly. Set height to match siblings.*/
 		padding: 0;
 		border: 0;
 	}
-/*Ensure all text has 15px of margin*/	
+/*Ensure all text has 15px of margin*/
 	h1, h2, h3, h4, h5, h6, p, li {
 		margin: 15px;
 	}
@@ -419,7 +419,11 @@ table {
 	text-align: center;
 	padding: 10px;
 	margin: 15px 5px 15px 5px;
-	background-color:#FF0000;
+	background-color: #FF0000;
+}
+
+#show-more-status a {
+	color: #ffffff;
 }
 
 .about-box h1 {
@@ -599,7 +603,7 @@ a:hover {
 }
 
 .profile-content {
-	width: 100%;	
+	width: 100%;
 	display: inline-block;
 }
 
