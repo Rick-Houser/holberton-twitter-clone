@@ -578,6 +578,8 @@ a:visited {
 	transition: all 2.0s ease-out;
 }
 
+
+
 a:hover {
 	color: #55ACEE;
 	background-color: #ffffff;
@@ -660,4 +662,15 @@ a:hover {
 
 .hidden {
 	display: none;
+}
+
+.footer {
+	width:100%;
+	height: 4em;
+	display: flex;
+	justify-content: space-around;
+	background-image: url('dark-background.jpg');
+}
+.footer a {
+	color: #FFFFFF;
 }
