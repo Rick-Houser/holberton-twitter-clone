@@ -402,7 +402,7 @@ table {
 	padding: 10px;
 }
 
-#ask-post-status {
+.ask-post-status {
 	text-decoration: none;
 	text-align: center;
 	padding: 10px;
@@ -410,8 +410,16 @@ table {
 	background-color:#41C670;
 }
 
-#ask-post-status a {
+.ask-post-status a {
  	color: #ffffff;
+}
+
+.replyclass {
+	text-decoration: none;
+	text-align: center;
+	padding: 10px;
+	margin: 15px 5px 15px 5px;
+	background-color:#41C670;
 }
 
 #show-more-status {
@@ -472,19 +480,8 @@ table {
 	border-radius: 5px;
 }
 
-.advise-box-alt {
-	padding: 3px;
-	background-color:#000000;
+.advise-box p {
 	color: #FFFFFF;
-	position: fixed;
-	bottom: 0;
-	margin: 0 3px 3px 0;
-	right: 0;
-	width: 250px;
-	border: 3px solid #800000;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
 }
 /* Target a tags within menu-btn class */
 .menu-btns a {
@@ -629,7 +626,7 @@ a:hover {
     line-height: 20px;
 }
 
-#reply_post {
+.reply_post {
 	text-decoration: none;
 	text-align: center;
 	padding: 10px;

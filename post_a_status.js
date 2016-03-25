@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() { 
+document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("poststatusbtn").addEventListener("click", postpre);
 	function postpre() { // call toggle function on poststatusbtn
 		var elem = document.getElementById('statuspost');
@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		var elem = document.getElementById('poststatusbtn');
 		elem.toggle();
 	}
-	document.getElementById("postbtn").addEventListener("click", postpostbtn);
+	document.getElementsByClassName("posts")[0].addEventListener("click", postpostbtn);
 	function postpostbtn() { // call toggle function on reply button
 		var elem = document.getElementById('statuspost');
 		elem.toggle(); // call toggle on div containing status reply
@@ -14,5 +14,3 @@ document.addEventListener("DOMContentLoaded", function() {
 		elem.toggle();
 	}
 });
-
-
