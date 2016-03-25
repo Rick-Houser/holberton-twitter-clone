@@ -648,23 +648,18 @@ a:hover {
 	justify-content: space-around;
 	background-image: url('dark-background.jpg');
 }
+
 .footer a {
 	color: #FFFFFF
 }
 
 /* CSS-only post status toggle */
-label {
-  cursor: pointer;
-}
-#post-toggle, #toggle-poststatus-btn {
-  display: none;  /* hide the checkbox */
-}
 #statuspost {
-  display: none;  /* defaults to hide statuspost */
+    display: none;
 }
-#post-toggle:checked + #statuspost {
-  display: block;  /* show statuspost on click */
+#ask-post-status:target #statuspost {
+    display: inline-block;
 }
-#toggle-poststatus-btn:checked + #poststatusbtn {
-	display: none; /* hide post status btn on click */
+#ask-post-status:target #poststatusbtn {
+    display: none;
 }
