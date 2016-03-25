@@ -674,3 +674,21 @@ a:hover {
 .footer a {
 	color: #FFFFFF;
 }
+
+/* CSS-only post status toggle */
+label {
+  cursor: pointer;
+}
+#post-toggle, #postbtn-toggle {
+  display: none;  /* hide the checkbox */
+}
+#statuspost {
+  display: none;  /* defaults to hide statuspost */
+}
+#post-toggle:checked + #statuspost {
+  display: block;  /* show statuspost on click */
+}
+#toggle-poststatus-btn:checked + #poststatusbtn {
+	display: none; /* hide post status btn on click */
+}
+#toggle-post-btn
