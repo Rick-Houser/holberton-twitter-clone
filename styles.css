@@ -494,24 +494,12 @@ table {
 	font-size: 1.2em;
 	color: #FFF;
   	background: #0CADA7; /* For browsers that do not support gradients */
-  	background: -webkit-linear-gradient(#55ACEE, #35cd95); /* For Safari 5.1 to 6.0 */
-  	background: -o-linear-gradient(#55ACEE, #35cd95); /* For Opera 11.1 to 12.0 */
-  	background: -moz-linear-gradient(#55ACEE, #35cd95); /* For Firefox 3.6 to 15 */
-  	background: linear-gradient(#55ACEE, #35cd95); /* Standard syntax */
 	padding: 5px 20px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	border-style: solid;
     border-width: 2px;
-}
-
-.menu-btns a:hover {
-	background: #0CADA7; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(#35cd95, #55ACEE); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#35cd95, #55ACEE); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#35cd95, #55ACEE); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#35cd95, #55ACEE); /* Standard syntax */
 }
 
 a:visited {
@@ -539,25 +527,16 @@ a:visited {
 	font-size: 1.2em;
 	color: #FFF;
   	background: #0CADA7; /* For browsers that do not support gradients */
-  	background: -webkit-linear-gradient(#55ACEE, #35cd95); /* For Safari 5.1 to 6.0 */
-  	background: -o-linear-gradient(#55ACEE, #35cd95); /* For Opera 11.1 to 12.0 */
-  	background: -moz-linear-gradient(#55ACEE, #35cd95); /* For Firefox 3.6 to 15 */
-  	background: linear-gradient(#55ACEE, #35cd95); /* Standard syntax */
-  	border-style: solid;
-    border-width: 2px;
+  	
 	padding: 5px 20px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	border-style: solid;
+    border-width: 2px;
 }
 
-.menu-btns-alt a:hover {
-	background: #0CADA7; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(#35cd95, #55ACEE); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#35cd95, #55ACEE); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#35cd95, #55ACEE); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#35cd95, #55ACEE); /* Standard syntax */
-}
+
 
 .menu-btns-alt {
 	text-align: center;
@@ -571,24 +550,22 @@ a:visited {
 .header-right a {
 	text-decoration: none;
 	color: #ffffff;
-	-webkit-transition: all 2.0s ease-out;
-	-ms-transition: all 2.0s ease-out;
-	-moz-transition: all 2.0s ease-out;
-	-o-transition: all 2.0s ease-out;
-	transition: all 2.0s ease-out;
+	-webkit-transition: all 1.0s ease-out;
+	-ms-transition: all 1.0s ease-out;
+	-moz-transition: all 1.0s ease-out;
+	-o-transition: all 1.0s ease-out;
+	transition: all 1.0s ease-out;
 }
 
-
-
 a:hover {
-	color: #55ACEE;
-	background-color: #ffffff;
+	background-color: #000000;
+	opacity:0.75;
 	text-decoration: underline;
-	-webkit-transition: all 2.0s ease-in-out;
-	-ms-transition: all 2.0s ease-in-out;
-	-moz-transition: all 2.0s ease-in-out;
-	-o-transition: all 2.0s ease-in-out;
-	transition: all 2.0s ease-in-out;
+	-webkit-transition: all 1.0s ease-in-out;
+	-ms-transition: all 1.0s ease-in-out;
+	-moz-transition: all 1.0s ease-in-out;
+	-o-transition: all 1.0s ease-in-out;
+	transition: all 1.0s ease-in-out;
 }
 /* Profile page styles */
 .profile {
@@ -672,7 +649,7 @@ a:hover {
 	background-image: url('dark-background.jpg');
 }
 .footer a {
-	color: #FFFFFF;
+	color: #FFFFFF
 }
 
 /* CSS-only post status toggle */
