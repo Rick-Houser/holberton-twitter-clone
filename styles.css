@@ -483,6 +483,11 @@ table {
 .advise-box p {
 	color: #FFFFFF;
 }
+
+.footer-text h2 {
+	color: #FFFFFF;
+	text-align:center;
+}
 /* Target a tags within menu-btn class */
 .menu-btns a {
 	text-align:center;
@@ -640,7 +645,7 @@ a:hover {
 
 .footer {
 	width:100%;
-	height: 4em;
+	height: 15%;
 	display: flex;
 	justify-content: space-around;
 	background-image: url('dark-background.jpg');
