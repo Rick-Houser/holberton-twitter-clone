@@ -356,7 +356,7 @@ so it lines up under aside perfectly. Set height to match siblings.*/
   	background-color:#55ACEE
 }
 
-h1, h2, h3, p {
+h1, h2, p {
 	color: #333333;
 }
 
@@ -368,6 +368,11 @@ h1 {
 h2 {
 	padding-top: 10px;
 	font-weight: bold;
+}
+
+h3 {
+	color: #FF0000;
+	font-size: 150%;
 }
 
 p {

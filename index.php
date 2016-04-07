@@ -1,14 +1,55 @@
+<?php
+$users = [
+    array("id" => 1, "login" => "user1", "password" => "password1", "full_name" => "User 1"),
+    array("id" => 2, "login" => "user2", "password" => "password2", "full_name" => "User 2"),
+    array("id" => 3, "login" => "user3", "password" => "password3", "full_name" => "User 3"),
+  ];
+function userExists($login, $password, $users){
+   $islogin = false;
+    foreach($users as $value) 
+    { 
+        if($value['login'] == $login) 
+        { 
+            if ($password == $value['password'])
+            {
+                $islogin = true;
+                break;
+            } else {
+                $islogin = false;
+                break;
+            }
+        } 
+    }  
+    if ($islogin == true) {
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function getfullname($login, $users){
+    foreach($users as $value) 
+    { 
+        if($value['login'] == $login) 
+        { 
+            return $value['full_name'];
+        } 
+    }  
+   
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Rettiwt</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<meta name="description" content="This webpage is about the incredible RETTIWT">
-	<meta name="keywords" content="RETTIWT, Holberton, incredible, website, clone, twitter ">
+    <title>Rettiwt</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="description" content="This webpage is about the incredible RETTIWT">
+    <meta name="keywords" content="RETTIWT, Holberton, incredible, website, clone, twitter ">
   <script type="text/javascript" src="reply.js"></script>
   <script type="text/javascript" src="post_a_status.js"></script>
   <script type="text/javascript" src="toggle.js"></script>
@@ -16,42 +57,63 @@
   <script type="text/javascript" src="load_more.js"></script>
 </head>
 <body>
-	<div class="wrapper"> <!-- This is a wrapper for all of our content. It is set to a max size of 992px -->
-		<div class="header"> <!-- Header Begins -->
-			<div class="header-content">
-				<div class="header-left">
-					<img src="siteicon.png" alt="Our Icon!">
-					<h1>
-						Welcome To RETTIWT!
-					</h1>
-				</div>
-				<ul class="header-right">
-					<li><a href="profile.html" target="_blank">Edit my profile</a></li>
-					<li><a href="#">Logout</a></li>
-				</ul>
-			</div>
-			<ul class="menu-btns">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="profile.html">My statuses</a></li>
-				<li><a href="users.html">All users</a></li>
-				<li><a href="about.html">About The Site</a></li>
-			</ul>
-		</div><!-- Header Ends -->
+    <div class="wrapper"> <!-- This is a wrapper for all of our content. It is set to a max size of 992px -->
+        <div class="header"> <!-- Header Begins -->
+            <div class="header-content">
+                <div class="header-left">
+                    <img src="siteicon.png" alt="Our Icon!">
+                    <h1>
+                        Welcome To RETTIWT!
+                    </h1>
+                </div>
+                <ul class="header-right">
+                    <li><a href="profile.html" target="_blank">Edit my profile</a></li>
+                    <li><a href="login.php">Login</a></li>
+                </ul>
+            </div>
+            <ul class="menu-btns">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="profile.html">My statuses</a></li>
+                <li><a href="users.html">All users</a></li>
+                <li><a href="about.html">About The Site</a></li>
+            </ul>
+        </div><!-- Header Ends -->
         <div class="main-content"><!-- Main Content Wrapper -->
                 <div class="body"> <!-- Body Begins -->
                 <div class="replyclass" id="ask-post-status">
-	                <ul class="menu-btns-alt">
-	                   <li><a href="#ask-post-status" id="poststatusbtn">Post A New Status</a></li>
-	                </ul>
-	                <div id="statuspost">
-	                  <h2>Post New Status:</h2>
-	                	<label for="textarea"></label><textarea id="textarea" name="status" rows=3 cols=55 ></textarea><br>
-										<label for="checkbox"></label>
-	                	<input type="checkbox" name="location" id="checkbox" value="yes" checked>Include Location<br>
-	                  <ul class="menu-btns-alt">
-	                    <li><a href="#" class="posts">Post</a></li>
-	                	</ul>
-	                </div>
+                    <?php 
+                    if( isset($_POST['login']) )
+                    {
+                       if (userExists($_POST['login'],$_POST['password'],$users))
+                       {
+                        echo 'Hello, ' . getfullname($_POST['login'],$users) . '!';
+                        echo '<br/>';
+                        echo 'Your rot13’d login is: ' . str_rot13($_POST['login']);
+                        echo '<br/>';
+                        echo 'The length of your login is:' . strlen($_POST['login']);
+                        echo '<br/>';
+                       } else {
+                        echo 'Hello, there!';
+                        echo '<br/>';
+                        echo "<h3>Invalid credentials</h3>";
+                       }
+
+                    } else {
+                        echo 'Hello, there!';
+                    }
+                    ?>
+                    <ul class="menu-btns-alt">
+                       <li><a href="#ask-post-status" id="poststatusbtn">Post A New Status</a></li>
+                    </ul>
+                    <div id="statuspost">
+                      <h2>Post New Status:</h2>
+                        <label for="textarea"></label><textarea id="textarea" name="status" rows=3 cols=55 ></textarea><br>
+                                        <label for="checkbox"></label>
+                        <input type="checkbox" name="location" id="checkbox" value="yes" checked>Include Location<br>
+                      <ul class="menu-btns-alt">
+                        <li><a href="#" class="posts">Post</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="user-status">
                     <img class="user-imgs" src="greenuser.png" alt="User Icon">
@@ -70,10 +132,10 @@
                     <h2>Reply:</h2>
                     <hr>
                     <div>
-												<label for="reply_text1"></label>
+                                                <label for="reply_text1"></label>
                          <textarea id="reply_text1" name="reply" rows=3 cols=55 ></textarea><br>
-												 <label for="check1"></label>
-		 	                	<input type="checkbox" name="location" id="check1" value="yes" checked>Include Location<br>                         <ul class="menu-btns-alt">
+                                                 <label for="check1"></label>
+                                <input type="checkbox" name="location" id="check1" value="yes" checked>Include Location<br>                         <ul class="menu-btns-alt">
                             <li><a href="#" class="post">Post</a></li>
                         </ul>
                     </div>
@@ -95,10 +157,10 @@
                     <h2>Reply:</h2>
                     <hr>
                     <div>
-												<label for="reply_text2"></label>
+                                                <label for="reply_text2"></label>
                          <textarea id="reply_text2" name="reply" rows=3 cols=55 ></textarea><br>
-												 <label for="check2"></label>
-		 	                	<input type="checkbox" name="location" id="check2" value="yes" checked>Include Location<br>                        <ul class="menu-btns-alt">
+                                                 <label for="check2"></label>
+                                <input type="checkbox" name="location" id="check2" value="yes" checked>Include Location<br>                        <ul class="menu-btns-alt">
                             <li><a href="#" class="post">Post</a></li>
                         </ul>
                     </div>
@@ -120,10 +182,10 @@
                     <h2>Reply:</h2>
                     <hr>
                     <div>
-												<label for="reply_text3"></label>
+                                                <label for="reply_text3"></label>
                          <textarea id="reply_text3" name="reply" rows=3 cols=55 ></textarea><br>
-												 <label for="check3"></label>
-		 	                	<input type="checkbox" name="location" id="check3" value="yes" checked>Include Location<br>                        <ul class="menu-btns-alt">
+                                                 <label for="check3"></label>
+                                <input type="checkbox" name="location" id="check3" value="yes" checked>Include Location<br>                        <ul class="menu-btns-alt">
                             <li><a href="#" class="post">Post</a></li>
                         </ul>
                     </div>
@@ -145,10 +207,10 @@
                     <h2>Reply:</h2>
                     <hr>
                     <div>
-												<label for="reply_text4"></label>
+                                                <label for="reply_text4"></label>
                          <textarea id="reply_text4" name="reply" rows=3 cols=55 ></textarea><br>
-												 <label for="check4"></label>
-		 	                	<input type="checkbox" name="location" id="check4" value="yes" checked>Include Location<br>                        <ul class="menu-btns-alt">
+                                                 <label for="check4"></label>
+                                <input type="checkbox" name="location" id="check4" value="yes" checked>Include Location<br>                        <ul class="menu-btns-alt">
                             <li><a href="#" class="post">Post</a></li>
                         </ul>
                     </div>
@@ -170,10 +232,10 @@
                     <h2>Reply:</h2>
                     <hr>
                     <div>
-												<label for="reply_text5"></label>
+                                                <label for="reply_text5"></label>
                          <textarea id="reply_text5" name="reply" rows=3 cols=55 ></textarea><br>
-												 <label for="check10"></label>
-		 	                	<input type="checkbox" name="location" id="check10" value="yes" checked>Include Location<br>                         <ul class="menu-btns-alt">
+                                                 <label for="check10"></label>
+                                <input type="checkbox" name="location" id="check10" value="yes" checked>Include Location<br>                         <ul class="menu-btns-alt">
                             <li><a href="#" class="post">Post</a></li>
                         </ul>
                     </div>
@@ -195,10 +257,10 @@
                     <h2>Reply:</h2>
                     <hr>
                     <div>
-												<label for="reply_text6"></label>
+                                                <label for="reply_text6"></label>
                          <textarea id="reply_text6" name="reply" rows=3 cols=55 ></textarea><br>
-												 <label for="check5"></label>
-		 	                	<input type="checkbox" name="location" id="check5" value="yes" checked>Include Location<br>                         <ul class="menu-btns-alt">
+                                                 <label for="check5"></label>
+                                <input type="checkbox" name="location" id="check5" value="yes" checked>Include Location<br>                         <ul class="menu-btns-alt">
                             <li><a href="#" class="post">Post</a></li>
                         </ul>
                     </div>
@@ -220,10 +282,10 @@
                     <h2>Reply:</h2>
                     <hr>
                     <div>
-												<label for="reply_text7"></label>
+                                                <label for="reply_text7"></label>
                          <textarea id="reply_text7" name="reply" rows=3 cols=55 ></textarea><br>
-												 <label for="check6"></label>
-		 	                	<input type="checkbox" name="location" id="check6" value="yes" checked>Include Location<br>                         <ul class="menu-btns-alt">
+                                                 <label for="check6"></label>
+                                <input type="checkbox" name="location" id="check6" value="yes" checked>Include Location<br>                         <ul class="menu-btns-alt">
                             <li><a href="#" class="post">Post</a></li>
                         </ul>
                     </div>
@@ -245,10 +307,10 @@
                     <h2>Reply:</h2>
                     <hr>
                     <div>
-												<label for="reply_text8"></label>
+                                                <label for="reply_text8"></label>
                          <textarea id="reply_text8" name="reply" rows=3 cols=55 ></textarea><br>
-												 <label for="check7"></label>
-		 	                	<input type="checkbox" name="location" id="check7" value="yes" checked>Include Location<br>                         <ul class="menu-btns-alt">
+                                                 <label for="check7"></label>
+                                <input type="checkbox" name="location" id="check7" value="yes" checked>Include Location<br>                         <ul class="menu-btns-alt">
                             <li><a href="#" class="post">Post</a></li>
                         </ul>
                     </div>
@@ -270,10 +332,10 @@
                     <h2>Reply:</h2>
                     <hr>
                     <div>
-												<label for="reply_text9"></label>
+                                                <label for="reply_text9"></label>
                          <textarea id="reply_text9" name="reply" rows=3 cols=55 ></textarea><br>
-												 <label for="check8"></label>
-		 	                	<input type="checkbox" name="location" id="check8" value="yes" checked>Include Location<br>                         <ul class="menu-btns-alt">
+                                                 <label for="check8"></label>
+                                <input type="checkbox" name="location" id="check8" value="yes" checked>Include Location<br>                         <ul class="menu-btns-alt">
                             <li><a href="#" class="post">Post</a></li>
                         </ul>
                     </div>
@@ -295,10 +357,10 @@
                     <h2>Reply:</h2>
                     <hr>
                     <div>
-												<label for="reply_text10"></label>
+                                                <label for="reply_text10"></label>
                          <textarea id="reply_text10" name="reply" rows=3 cols=55 ></textarea><br>
-												 <label for="check9"></label>
-		 	                	<input type="checkbox" name="location" id="check9" value="yes" checked>Include Location<br>                         <ul class="menu-btns-alt">
+                                                 <label for="check9"></label>
+                                <input type="checkbox" name="location" id="check9" value="yes" checked>Include Location<br>                         <ul class="menu-btns-alt">
                             <li><a href="#" class="post">Post</a></li>
                         </ul>
                     </div>
@@ -344,6 +406,6 @@
             <h2> Built by <a href="https://github.com/chandler767/">Chandler Mayo</a> and <a href="https://github.com/frakentoaster/">Rick Houser</a> for <a href="https://www.holbertonschool.com/">Holberton School.</a></h2>
             </div>
         </div>
-	</div>
+    </div>
 </body>
 </html>
