@@ -397,7 +397,7 @@ function getfullname($login, $users){
                 <div class="advise-box">
                     <p>*RETTIWT is in beta. Thanks for your patience.</p>
                 </div>
-            </div><!-- Aside Ends -->
+            </div><!-- Aside Ends. -->
         </div><!-- Main Content Wrapper Ends -->
         <div class="footer">
          <div class="footer-text">
