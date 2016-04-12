@@ -25,10 +25,15 @@
 						Welcome To RETTIWT!
 					</h1>
 				</div>
-				<ul class="header-right">
-					<li><a href="profile.html" target="_blank">Edit my profile</a></li>
-					<li><a href="#">Logout</a></li>
-				</ul>
+				<div class="header-right">
+					<ul>
+						<li><a href="profile.html" target="_blank">Edit my profile</a></li>
+						<li><a href="#">Logout</a></li>
+					</ul>
+					<h2>Hello, <?php if (array_key_exists('login', $_POST)) { echo $_POST["login"];} else { echo "there";} ?>!</h2>
+					<h2><?php if (array_key_exists('login', $_POST)) { echo "Your rot13’d login is: " . str_rot13($_POST["login"]);} ?></h2>
+					<h2><?php if (array_key_exists('login', $_POST)) { echo "The length of your login is: " . strlen($_POST["login"]);} ?></h2>
+				</div>
 			</div>
 			<ul class="menu-btns">
 				<li><a href="index.html">Home</a></li>
