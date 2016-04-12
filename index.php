@@ -1,20 +1,7 @@
-<!DOCTYPE html>
 <?php
-$users = [
-    array("id" => 1, "login" => "user1", "password" => "password1", "full_name" => "User 1"),
-    array("id" => 2, "login" => "user2", "password" => "password2", "full_name" => "User 2"),
-    array("id" => 3, "login" => "user3", "password" => "password3", "full_name" => "User 3"),
-  ];
-
-function userExists($login, $password, $users) {
-	foreach ($users as $user) {
-		if ($user["login"] == $login && $user["password"] == $password) {
-			return $user;
-		}
-	}
-  return false;
-}
+  include_once("model/user.php");
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Rettiwt</title>
@@ -33,46 +20,7 @@ function userExists($login, $password, $users) {
 </head>
 <body>
 	<div class="wrapper"> <!-- This is a wrapper for all of our content. It is set to a max size of 992px -->
-		<div class="header"> <!-- Header Begins -->
-			<div class="header-content">
-				<div class="header-left">
-					<img src="siteicon.png" alt="Our Icon!">
-					<h1>
-						Welcome To RETTIWT!
-					</h1>
-				</div>
-				<div class="header-right">
-					<ul>
-						<li><a href="profile.html" target="_blank">Edit my profile</a></li>
-						<li><a href="#">Logout</a></li>
-					</ul>
-          <div class="welcome">
-            <?php
-              if (array_key_exists('login', $_POST)) {
-                if (userExists($_POST["login"], $_POST["password"], $users) == false) {
-                  echo "<p>Hello, there!</p>";
-                  echo "<p>Invalid Credentials</p>";
-                }
-                else {
-                  echo "<p>Hello, " . userExists($_POST['login'], $_POST['password'], $users)['full_name'],"!</p>";
-                  echo "<p>Your rot13’d login is: " . str_rot13($_POST['login']),"</p>";
-                  echo "<p>The length of your login is: " . strlen($_POST['login']),"</p>";
-                }
-              }
-              else {
-                echo "<p>Hello, there!</p>";
-              }
-            ?>
-          </div>
-				</div>
-			</div>
-			<ul class="menu-btns">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="profile.html">My statuses</a></li>
-				<li><a href="users.html">All users</a></li>
-				<li><a href="about.html">About The Site</a></li>
-			</ul>
-		</div><!-- Header Ends -->
+    <?php include("views/header.php"); ?>
         <div class="main-content"><!-- Main Content Wrapper -->
                 <div class="body"> <!-- Body Begins -->
                 <div class="replyclass" id="ask-post-status">
@@ -373,13 +321,7 @@ function userExists($login, $password, $users) {
                 </div>
             </div><!-- Aside Ends -->
         </div><!-- Main Content Wrapper Ends -->
-        <div class="footer">
-         <div class="footer-text">
-            <h2><a href="users.html">All users</a> - <a href="profile.html">Profile</a> - <a href="about.html">About The Site</a></h2>
-             <hr>
-            <h2> Built by <a href="https://github.com/chandler767/">Chandler Mayo</a> and <a href="https://github.com/frakentoaster/">Rick Houser</a> for <a href="https://www.holbertonschool.com/">Holberton School.</a></h2>
-            </div>
-        </div>
+        <?php include("views/footer.php"); ?>
 	</div>
 </body>
 </html>
