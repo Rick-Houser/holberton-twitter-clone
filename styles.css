@@ -685,3 +685,13 @@ a:focus {
 	-o-transition: all 1.0s ease-in-out;
 	transition: all 1.0s ease-in-out;
 }
+
+.welcome p {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+
+.welcome p:first-child {
+	margin-top: 25px;
+}

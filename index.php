@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 $users = [
     array("id" => 1, "login" => "user1", "password" => "password1", "full_name" => "User 1"),
@@ -6,18 +7,14 @@ $users = [
   ];
 
 function userExists($login, $password, $users) {
-	foreach ($$users as $user) {
+	foreach ($users as $user) {
 		if ($user["login"] == $login && $user["password"] == $password) {
 			return $user;
 		}
-		echo "InvalidArgumentException";
-		return false;
 	}
+  return false;
 }
-
 ?>
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Rettiwt</title>
@@ -49,9 +46,24 @@ function userExists($login, $password, $users) {
 						<li><a href="profile.html" target="_blank">Edit my profile</a></li>
 						<li><a href="#">Logout</a></li>
 					</ul>
-					<h2>Hello, <?php if (array_key_exists('login', $_POST)) { echo $_POST["login"];} else { echo "there";} ?>!</h2>
-					<h2><?php if (array_key_exists('login', $_POST)) { echo "Your rot13’d login is: " . str_rot13($_POST["login"]);} ?></h2>
-					<h2><?php if (array_key_exists('login', $_POST)) { echo "The length of your login is: " . strlen($_POST["login"]);} ?></h2>
+          <div class="welcome">
+            <?php
+              if (array_key_exists('login', $_POST)) {
+                if (userExists($_POST["login"], $_POST["password"], $users) == false) {
+                  echo "<p>Hello, there!</p>";
+                  echo "<p>Invalid Credentials</p>";
+                }
+                else {
+                  echo "<p>Hello, " . userExists($_POST['login'], $_POST['password'], $users)['full_name'],"!</p>";
+                  echo "<p>Your rot13’d login is: " . str_rot13($_POST['login']),"</p>";
+                  echo "<p>The length of your login is: " . strlen($_POST['login']),"</p>";
+                }
+              }
+              else {
+                echo "<p>Hello, there!</p>";
+              }
+            ?>
+          </div>
 				</div>
 			</div>
 			<ul class="menu-btns">

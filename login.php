@@ -41,9 +41,9 @@
           <body>
             <form class="login" action="index.php" method="post">
               <label for="login">Login:</label>
-              <input type="text" name="login" value="Login">
+              <input type="text" name="login">
               <label for="password">Password:</label>
-              <input type="password" name="password" value="Password">
+              <input type="password" name="password">
               <input type="submit" name="submit button" value="Submit">
             </form>
           </body>
