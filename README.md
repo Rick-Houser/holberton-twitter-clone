@@ -5,4 +5,4 @@ The purpose of this project is to pair program while building a bare bones (html
 ### The SEO Challenge
 
 After creating the project, all students were given an SEO challenge.
-given the words "Impossible Octopus Fitness", we were tasked with obtaining the highest google search ranking for that given term. After 3 months of SEO tricks, the school completed the challenge and announced us the winners. It was definitely a lot of fun working on teams and learning SEO tactics. 
+Given a string, we were tasked with obtaining the highest google search ranking for that given term. After 3 months of SEO tricks, the school completed the challenge and announced us the winners. It was definitely a lot of fun working on teams and learning SEO tactics.
